@@ -23,6 +23,12 @@ const config: Config = {
 				},
 				green: '#08AD08',
 			},
+			screens: {
+				lg: { max: '1279px' },
+				md: { max: '991px' },
+				sm: { max: '767px' },
+				xs: { max: '575px' },
+			},
 		},
 	},
 	plugins: [],

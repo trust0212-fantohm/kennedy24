@@ -34,14 +34,14 @@ const links = [
 
 const Footer = () => {
 	return (
-		<footer className='bg-gray-600 pb-6 pt-12'>
+		<footer className='bg-gray-600 pb-6 pt-12 sm:pt-6'>
 			<div className='container space-y-4'>
-				<div className='flex items-start justify-between'>
-					<ul className='grid grid-flow-col grid-cols-2 grid-rows-3 gap-4'>
+				<div className='flex items-start justify-between sm:flex-col-reverse sm:gap-4'>
+					<ul className='grid grid-flow-col grid-cols-2 grid-rows-3 gap-4 sm:gap-2'>
 						{links.map((link) => (
 							<Link
 								href={link.href}
-								className='text-primary w-fit text-[0.8rem] font-bold'
+								className='w-fit text-[0.8rem] font-bold text-primary sm:h-6'
 								key={link.title}
 							>
 								{link.title}
@@ -50,19 +50,19 @@ const Footer = () => {
 					</ul>
 					<Image src={Logo} alt='Logo' width={236} height={47} />
 				</div>
-				<div className='flex items-end justify-between'>
-					<div className='invisible'>
-						<p className='text-primary text-xs font-bold'>PAID FOR BY TEAM KENNEDY</p>
-						<p className='text-primary text-[11px]'>
+				<div className='flex items-end justify-between sm:flex-col sm:items-center sm:gap-4'>
+					<div className='invisible sm:hidden'>
+						<p className='text-xs font-bold text-primary'>PAID FOR BY TEAM KENNEDY</p>
+						<p className='text-[11px] text-primary'>
 							Copyright @ 2023. All rights reserved.
 						</p>
 					</div>
 					<Socials />
 					<div>
-						<p className='text-primary text-right text-[0.8rem] font-bold'>
+						<p className='text-right text-[0.8rem] font-bold text-primary sm:text-center'>
 							PAID FOR BY TEAM KENNEDY
 						</p>
-						<p className='text-primary text-right text-[0.7rem]'>
+						<p className='text-right text-[0.7rem] text-primary sm:text-center'>
 							Copyright @ 2023. All rights reserved.
 						</p>
 					</div>
