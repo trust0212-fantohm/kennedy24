@@ -7,6 +7,12 @@ const config: Config = {
 		'./src/app/**/*.{js,ts,jsx,tsx,mdx}',
 	],
 	theme: {
+		screens: {
+			lg: { max: '1279px' },
+			md: { max: '991px' },
+			sm: { max: '767px' },
+			xs: { max: '575px' },
+		},
 		extend: {
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -22,12 +28,7 @@ const config: Config = {
 					600: '#E3E3E3',
 				},
 				green: '#08AD08',
-			},
-			screens: {
-				lg: { max: '1279px' },
-				md: { max: '991px' },
-				sm: { max: '767px' },
-				xs: { max: '575px' },
+				'accent-slate': '#CFD9E3',
 			},
 		},
 	},

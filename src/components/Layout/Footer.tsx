@@ -34,14 +34,14 @@ const links = [
 
 const Footer = () => {
 	return (
-		<footer className='bg-gray-600 pb-6 pt-12 sm:pt-6'>
-			<div className='container space-y-4'>
-				<div className='flex items-start justify-between sm:flex-col-reverse sm:gap-4'>
-					<ul className='grid grid-flow-col grid-cols-2 grid-rows-3 gap-4 sm:gap-2'>
+		<footer className='bg-gray-600 pb-6 pt-12'>
+			<div className='container space-y-4 sm:space-y-16'>
+				<div className='flex items-start justify-between gap-8 sm:flex-col-reverse'>
+					<ul className='grid grid-flow-col grid-cols-2 grid-rows-3 gap-4 sm:gap-x-0'>
 						{links.map((link) => (
 							<Link
 								href={link.href}
-								className='w-fit text-[0.8rem] font-bold text-primary sm:h-6'
+								className='w-fit whitespace-nowrap text-[0.8rem] font-bold text-primary'
 								key={link.title}
 							>
 								{link.title}
@@ -50,19 +50,21 @@ const Footer = () => {
 					</ul>
 					<Image src={Logo} alt='Logo' width={236} height={47} />
 				</div>
-				<div className='flex items-end justify-between sm:flex-col sm:items-center sm:gap-4'>
+				<div className='flex items-end justify-between sm:flex-col sm:items-start'>
 					<div className='invisible sm:hidden'>
-						<p className='text-xs font-bold text-primary'>PAID FOR BY TEAM KENNEDY</p>
-						<p className='text-[11px] text-primary'>
+						<p className='text-right text-[12.8px] font-bold text-primary sm:text-left'>
+							PAID FOR BY TEAM KENNEDY
+						</p>
+						<p className='text-right text-[11.2px] text-primary sm:text-left'>
 							Copyright @ 2023. All rights reserved.
 						</p>
 					</div>
 					<Socials />
-					<div>
-						<p className='text-right text-[0.8rem] font-bold text-primary sm:text-center'>
+					<div className='sm:pl-4 sm:pt-4'>
+						<p className='text-right text-[12.8px] font-bold text-primary sm:text-left'>
 							PAID FOR BY TEAM KENNEDY
 						</p>
-						<p className='text-right text-[0.7rem] text-primary sm:text-center'>
+						<p className='text-right text-[11.2px] text-primary sm:text-left'>
 							Copyright @ 2023. All rights reserved.
 						</p>
 					</div>

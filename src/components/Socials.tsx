@@ -31,14 +31,14 @@ interface Props {
 
 const Socials: React.FC<Props> = ({ className }) => {
 	return (
-		<ul className={cx('flex gap-2', className)}>
+		<ul className={cx('flex gap-2 sm:gap-1.5', className)}>
 			{socials.map((social) => (
 				<li key={social.name}>
 					<Link
 						href={social.href}
-						className='bg-primary flex h-10 w-10 items-center justify-center rounded-full'
+						className='flex h-10 w-10 items-center justify-center rounded-full bg-primary sm:h-[26px] sm:w-[26px]'
 					>
-						<Icon icon={social.icon} className='text-white' />
+						<Icon icon={social.icon} className='text-white sm:text-xs' />
 					</Link>
 				</li>
 			))}

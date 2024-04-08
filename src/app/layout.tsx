@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import cx from 'classnames'
+import 'rc-slider/assets/index.css'
 import '@/styles/globals.css'
 import { inter } from './fonts'
 

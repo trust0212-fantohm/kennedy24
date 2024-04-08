@@ -9,13 +9,21 @@ import Socials from '@/components/Socials'
 
 const Header = () => {
 	return (
-		<header className='py-8 shadow-[0px_0.8px_12px_#DEE2E6] sm:py-6'>
-			<div className='container flex items-end justify-between sm:flex-col sm:items-center sm:gap-4'>
+		<header className='py-8 shadow-[0px_0.8px_12px_#DEE2E6] sm:py-4'>
+			<div className='container flex items-center justify-between'>
 				<Link href='/'>
-					<Image src={Logo} alt='Logo' width={236} height={47} />
+					<Image
+						src={Logo}
+						alt='Logo'
+						width={236}
+						height={47}
+						className='sm:h-8 sm:w-40'
+					/>
 				</Link>
-				<div className='flex items-center gap-[18px]'>
-					<p className={cx('text-red', poppins.className)}>Follow KENNEDY24</p>
+				<div className='flex items-center gap-[18px] sm:flex-col-reverse sm:gap-2'>
+					<p className={cx('text-red sm:text-[10px]', poppins.className)}>
+						Follow KENNEDY24
+					</p>
 					<Socials />
 				</div>
 			</div>
