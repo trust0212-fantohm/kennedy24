@@ -6,6 +6,7 @@ import { poppins } from '@/app/fonts'
 import useAppDispatch from '@/hooks/useAppDispatch'
 import useAppSelector from '@/hooks/useAppSelector'
 import { setVerifyEmailModalOpen } from '@/redux/slices/modal'
+import { Dialog, DialogContent } from '../ui/dialog'
 
 const VerifyEmailModal = () => {
 	const dispatch = useAppDispatch()
@@ -20,16 +21,8 @@ const VerifyEmailModal = () => {
 	}
 
 	return (
-		<div
-			className={cx(
-				'fixed inset-0 z-[1300] flex items-center justify-center bg-white/90 p-4 transition-all duration-200 ease-in-out',
-				isOpen
-					? 'pointer-events-auto translate-y-0 opacity-100'
-					: 'pointer-events-none -translate-y-8 opacity-0'
-			)}
-		>
-			<div className='absolute inset-0' onClick={handleCloseModal} />
-			<div className='relative z-10 w-full max-w-md space-y-8 rounded-2xl bg-primary px-[30px] pb-24 pt-16 sm:px-4 sm:pt-8'>
+		<Dialog open={isOpen} onOpenChange={handleCloseModal}>
+			<DialogContent className='w-full max-w-md space-y-8 rounded-2xl bg-primary px-[30px] pb-24 pt-16 sm:px-4 sm:pt-8'>
 				<div>
 					<p className='modal-header'>Verify your email address</p>
 					<p className={cx('text-center font-light text-white', poppins.className)}>
@@ -50,8 +43,8 @@ const VerifyEmailModal = () => {
 						characterFilled: '!text-primary',
 					}}
 				/>
-			</div>
-		</div>
+			</DialogContent>
+		</Dialog>
 	)
 }
 

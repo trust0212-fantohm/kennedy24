@@ -9,6 +9,7 @@ import {
 	setResetPasswordModalOpen,
 	setSignUpModalOpen,
 } from '@/redux/slices/modal'
+import { Dialog, DialogContent } from '../ui/dialog'
 
 const LoginModal = () => {
 	const dispatch = useAppDispatch()
@@ -29,16 +30,8 @@ const LoginModal = () => {
 	}
 
 	return (
-		<div
-			className={cx(
-				'fixed inset-0 z-[1300] flex items-center justify-center bg-white/90 p-4 transition-all duration-200 ease-in-out',
-				isOpen
-					? 'pointer-events-auto translate-y-0 opacity-100'
-					: 'pointer-events-none -translate-y-8 opacity-0'
-			)}
-		>
-			<div className='absolute inset-0' onClick={handleCloseModal} />
-			<div className='relative z-10 w-full max-w-md space-y-8 rounded-2xl bg-primary px-10 py-8 sm:px-6 sm:py-8'>
+		<Dialog open={isOpen} onOpenChange={handleCloseModal}>
+			<DialogContent className='w-full max-w-md space-y-8 rounded-2xl bg-primary px-10 py-8 sm:px-6 sm:py-8'>
 				<p className='modal-header'>Log in</p>
 				<div className='space-y-10'>
 					<div className='space-y-4'>
@@ -64,8 +57,8 @@ const LoginModal = () => {
 					</div>
 					<ModalSubmitButton text='Continue' />
 				</div>
-			</div>
-		</div>
+			</DialogContent>
+		</Dialog>
 	)
 }
 

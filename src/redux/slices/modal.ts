@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 import { IModal } from '../types/modal'
 
 const initialState: IModal = {
-	loginModalOpen: false,
+	loginModalOpen: true,
 	signUpModalOpen: false,
 	resetPasswordModalOpen: false,
 	checkResetLinkModalOpen: false,
